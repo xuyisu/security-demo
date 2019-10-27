@@ -1,0 +1,6 @@
+#本节说的是springboot的默认配置
+server:
+  port: 8080  #应用端口号
+logging:
+  com.yisu: debug #日志级别
+
