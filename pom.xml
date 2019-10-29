@@ -11,6 +11,8 @@
     <modules>
         <module>secirity-chushi</module>
         <module>security-auth-memory</module>
+        <module>security-auth-form</module>
+        <module>security-common</module>
     </modules>
 
     <parent>
