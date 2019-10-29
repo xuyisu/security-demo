@@ -13,6 +13,9 @@
         <module>security-auth-memory</module>
         <module>security-auth-form</module>
         <module>security-common</module>
+        <module>security-auth-jwt</module>
+        <module>security-auth-qq</module>
+        <module>security-auth-wechat</module>
     </modules>
 
     <parent>
