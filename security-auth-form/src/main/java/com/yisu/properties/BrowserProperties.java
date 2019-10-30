@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.yisu.properties;
 
@@ -15,13 +15,13 @@ import lombok.Data;
  */
 @Data
 public class BrowserProperties {
-	
 
-	private String signUpUrl = "/imooc-signUp.html";
-	
+
+	private String loginPage = "/imooc-signUp.html";
+
 
 	private LoginResponseType loginType = LoginResponseType.JSON;
-	
 
-	
+
+
 }
