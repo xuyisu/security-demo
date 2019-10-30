@@ -16,6 +16,7 @@
         <module>security-auth-jwt</module>
         <module>security-auth-qq</module>
         <module>security-auth-wechat</module>
+        <module>security-validate-code</module>
     </modules>
 
     <parent>
