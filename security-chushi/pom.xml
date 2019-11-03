@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>secirity-chushi</artifactId>
+    <artifactId>security-chushi</artifactId>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
