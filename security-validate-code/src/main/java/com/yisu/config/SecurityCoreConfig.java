@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.yisu.config;
 
@@ -8,7 +8,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author zhailiang
+ * @author xuyisu
  *
  */
 @Configuration
