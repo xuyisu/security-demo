@@ -1,5 +1,6 @@
-package com.yisu.validate.properties;
+package com.yisu.properties;
 
+import com.yisu.validate.properties.ValidateCodeProperties;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
@@ -13,6 +14,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = "fw.security")
 @Data
 public class SecurityProperties {
+
+	private BrowserProperties browser = new BrowserProperties();
 
 	private ValidateCodeProperties code = new ValidateCodeProperties();
 

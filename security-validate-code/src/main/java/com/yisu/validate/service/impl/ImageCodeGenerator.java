@@ -1,8 +1,9 @@
 package com.yisu.validate.service.impl;
 
+import com.yisu.properties.SecurityProperties;
 import com.yisu.validate.image.ImageCode;
-import com.yisu.validate.properties.SecurityProperties;
 import com.yisu.validate.service.ValidateCodeGenerator;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.context.request.ServletWebRequest;
@@ -15,6 +16,7 @@ import java.util.Random;
  * @author zhailiang
  *
  */
+@Data
 public class ImageCodeGenerator implements ValidateCodeGenerator {
 
 	/**
