@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>secirity-chushi</module>
+        <module>security-chushi</module>
         <module>security-auth-memory</module>
         <module>security-auth-form</module>
         <module>security-common</module>
@@ -18,6 +18,7 @@
         <module>security-auth-wechat</module>
         <module>security-validate-code</module>
         <module>security-validate-sms</module>
+        <module>security-oauth2</module>
     </modules>
 
     <parent>
