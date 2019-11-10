@@ -33,3 +33,21 @@ REDIRECT 会重定向到`fw.security.browser.loginPage`  设置的页面
 ###2.3 接口
 访问业务接口 `http://localhost:8080/user` ,只有用户登录成功之后才能访问。
 ![api](images/api.png)
+##3 SpringSecurity 配置
+```java
+@Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.formLogin()
+                .loginPage("/authentication/require")
+                .loginProcessingUrl("/authentication/form")
+                .successHandler(fwAuthenticationSuccessHandler)
+                .failureHandler(fwAuthenctiationFailureHandler)
+                .and()
+                .authorizeRequests()
+                .antMatchers("/authentication/require",
+                        securityProperties.getBrowser().getLoginPage()).permitAll()
+                .anyRequest().authenticated()
+                .and()
+                .csrf().disable();
+    }
+```
