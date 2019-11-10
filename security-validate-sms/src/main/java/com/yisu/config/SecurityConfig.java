@@ -1,14 +1,11 @@
 package com.yisu.config;
 
-import com.yisu.authentication.FwAuthenctiationFailureHandler;
-import com.yisu.authentication.FwAuthenticationSuccessHandler;
+import com.yisu.authentication.mobile.SmsCodeAuthenticationSecurityConfig;
 import com.yisu.properties.SecurityProperties;
-import com.yisu.sms.filter.ValidateCodeFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 /**
  * @ClassName SecurityConfig
@@ -19,26 +16,19 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    private FwAuthenticationSuccessHandler fwAuthenticationSuccessHandler;
-
-    @Autowired
-    private FwAuthenctiationFailureHandler fwAuthenctiationFailureHandler;
 
     @Autowired
     private SecurityProperties securityProperties;
 
+    @Autowired
+    private SmsCodeAuthenticationSecurityConfig smsCodeAuthenticationSecurityConfig;
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        ValidateCodeFilter validateCodeFilter=new ValidateCodeFilter();
-        validateCodeFilter.setAuthenticationFailureHandler(fwAuthenctiationFailureHandler);
 
-        http.addFilterBefore(validateCodeFilter, UsernamePasswordAuthenticationFilter.class)
-                .formLogin()
+        http.formLogin()
                 .loginPage("/authentication/require")
                 .loginProcessingUrl("/authentication/form")
-                .successHandler(fwAuthenticationSuccessHandler)
-                .failureHandler(fwAuthenctiationFailureHandler)
                 .and()
                 .authorizeRequests()
                 .antMatchers("/authentication/require",

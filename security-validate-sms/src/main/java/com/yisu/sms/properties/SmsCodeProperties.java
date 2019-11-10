@@ -1,3 +1,6 @@
+/**
+ *
+ */
 package com.yisu.sms.properties;
 
 import lombok.Data;
@@ -7,12 +10,12 @@ import lombok.Data;
  *
  */
 @Data
-public class ImageCodeProperties{
+public class SmsCodeProperties {
 
-	private int length = 4;
+	private int length = 6;
 	private int expireIn = 60;
-	private int width = 67;
-	private int height = 23;
+
+	private String url;
 
 
 }

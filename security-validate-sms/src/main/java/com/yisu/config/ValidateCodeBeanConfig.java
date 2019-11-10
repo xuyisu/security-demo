@@ -4,8 +4,8 @@
 package com.yisu.config;
 
 import com.yisu.properties.SecurityProperties;
-import com.yisu.sms.service.ValidateCodeGenerator;
-import com.yisu.sms.service.impl.ImageCodeGenerator;
+import com.yisu.sms.service.SmsCodeSender;
+import com.yisu.sms.service.impl.DefaultSmsCodeSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
@@ -18,15 +18,11 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ValidateCodeBeanConfig {
 
-	@Autowired
-	private SecurityProperties securityProperties;
 
 	@Bean
-	@ConditionalOnMissingBean(name = "imageValidateCodeGenerator")
-	public ValidateCodeGenerator imageValidateCodeGenerator() {
-		ImageCodeGenerator codeGenerator = new ImageCodeGenerator();
-		codeGenerator.setSecurityProperties(securityProperties);
-		return codeGenerator;
+	@ConditionalOnMissingBean(SmsCodeSender.class)
+	public SmsCodeSender smsCodeSender() {
+		return new DefaultSmsCodeSender();
 	}
 
 
