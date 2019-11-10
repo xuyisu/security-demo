@@ -12,4 +12,4 @@ fw:
   security:
     browser:
       loginPage: /default-login.html
-      loginType: JSON
+      loginType: JSON  #两种  REDIRECT  重定向页面 ，JSON 返回json描述
