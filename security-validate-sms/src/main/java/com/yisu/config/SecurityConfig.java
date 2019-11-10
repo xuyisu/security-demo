@@ -1,11 +1,11 @@
 package com.yisu.config;
 
+import com.yisu.authentication.AbstractChannelSecurityConfig;
 import com.yisu.authentication.mobile.SmsCodeAuthenticationSecurityConfig;
 import com.yisu.properties.SecurityProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 /**
  * @ClassName SecurityConfig
@@ -14,7 +14,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
  * @Date 2019/10/29
  */
 @EnableWebSecurity
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+public class SecurityConfig extends AbstractChannelSecurityConfig {
 
 
     @Autowired
