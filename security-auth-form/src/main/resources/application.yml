@@ -11,5 +11,5 @@ spring:
 fw:
   security:
     browser:
-      loginPage: /default-login.html
+      loginPage: /default-login.html #默认登录页面地址  loginType为REDIRECT时起作用
       loginType: JSON  #两种  REDIRECT  重定向页面 ，JSON 返回json描述
