@@ -1,0 +1,21 @@
+#本节说的是SpringSecutity的短信验证码
+server:
+  port: 8080  #应用端口号
+logging:
+  com.yisu: debug #日志级别
+spring:
+  security:
+    user:
+      name: user  #自定义这是用户名，如果没设置 默认的用户名是user
+      password: 123456 #自定义密码，如果没设置 默认的密码在控制台中寻找
+fw:
+  security:
+    browser:
+      loginPage: /default-login.html  #默认登录页面地址  loginType为REDIRECT时起作用
+      loginType: JSON  #两种  REDIRECT  重定向页面 ，JSON 返回json描述
+      code:
+        image:
+          length: 4 #设置验证码的位数
+          expireIn: 60 #设置验证码超时时间（秒）
+          width:  67 #验证码显示的宽度（px）
+          height: 23 #验证码显示的高度（px）
