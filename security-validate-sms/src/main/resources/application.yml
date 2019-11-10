@@ -17,5 +17,3 @@ fw:
         image:
           length: 4 #设置验证码的位数
           expireIn: 60 #设置验证码超时时间（秒）
-          width:  67 #验证码显示的宽度（px）
-          height: 23 #验证码显示的高度（px）

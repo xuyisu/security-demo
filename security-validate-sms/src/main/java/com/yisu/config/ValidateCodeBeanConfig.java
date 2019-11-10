@@ -4,8 +4,8 @@
 package com.yisu.config;
 
 import com.yisu.properties.SecurityProperties;
-import com.yisu.validate.service.ValidateCodeGenerator;
-import com.yisu.validate.service.impl.ImageCodeGenerator;
+import com.yisu.sms.service.ValidateCodeGenerator;
+import com.yisu.sms.service.impl.ImageCodeGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;

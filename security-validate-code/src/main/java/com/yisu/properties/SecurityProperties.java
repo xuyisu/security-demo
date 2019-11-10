@@ -1,6 +1,6 @@
 package com.yisu.properties;
 
-import com.yisu.validate.properties.ValidateCodeProperties;
+import com.yisu.sms.properties.ValidateCodeProperties;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
