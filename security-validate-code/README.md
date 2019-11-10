@@ -1,4 +1,4 @@
- ### 本节主要是默认的security自定义登录和返回错误信息
+ ### 本节主要是默认的security验证码处理
  
 ##1.项目结构
 ![project](images/project.png)
