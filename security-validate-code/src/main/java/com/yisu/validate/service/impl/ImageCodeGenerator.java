@@ -1,8 +1,8 @@
-package com.yisu.sms.service.impl;
+package com.yisu.validate.service.impl;
 
 import com.yisu.properties.SecurityProperties;
-import com.yisu.sms.image.ImageCode;
-import com.yisu.sms.service.ValidateCodeGenerator;
+import com.yisu.validate.image.ImageCode;
+import com.yisu.validate.service.ValidateCodeGenerator;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.ServletRequestUtils;

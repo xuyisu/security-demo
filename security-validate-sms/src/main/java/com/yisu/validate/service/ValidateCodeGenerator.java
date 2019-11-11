@@ -1,9 +1,9 @@
 /**
  *
  */
-package com.yisu.sms.service;
+package com.yisu.validate.service;
 
-import com.yisu.sms.image.ValidateCode;
+import com.yisu.validate.image.ValidateCode;
 import org.springframework.web.context.request.ServletWebRequest;
 
 /**

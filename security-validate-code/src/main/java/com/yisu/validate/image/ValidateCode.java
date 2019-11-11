@@ -1,4 +1,4 @@
-package com.yisu.sms.image;
+package com.yisu.validate.image;
 
 import lombok.Data;
 

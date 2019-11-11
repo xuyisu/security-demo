@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.yisu.sms.properties;
+package com.yisu.validate.properties;
 
 import lombok.Data;
 

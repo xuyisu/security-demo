@@ -1,11 +1,8 @@
-/**
- *
- */
-package com.yisu.sms.filter;
+package com.yisu.validate.filter;
 
 import com.yisu.properties.SecurityProperties;
-import com.yisu.sms.exception.ValidateCodeException;
-import com.yisu.sms.image.ImageCode;
+import com.yisu.validate.exception.ValidateCodeException;
+import com.yisu.validate.image.ImageCode;
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.InitializingBean;

@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.yisu.sms.exception;
+package com.yisu.validate.exception;
 
 import org.springframework.security.core.AuthenticationException;
 

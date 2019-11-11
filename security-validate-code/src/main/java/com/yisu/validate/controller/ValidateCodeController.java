@@ -1,7 +1,7 @@
-package com.yisu.sms.controller;
+package com.yisu.validate.controller;
 
-import com.yisu.sms.image.ImageCode;
-import com.yisu.sms.service.ValidateCodeGenerator;
+import com.yisu.validate.image.ImageCode;
+import com.yisu.validate.service.ValidateCodeGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.social.connect.web.HttpSessionSessionStrategy;
 import org.springframework.social.connect.web.SessionStrategy;
