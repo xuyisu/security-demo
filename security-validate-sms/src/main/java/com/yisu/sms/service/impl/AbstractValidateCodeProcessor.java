@@ -8,6 +8,7 @@ import com.yisu.sms.exception.ValidateCodeException;
 import com.yisu.sms.image.ValidateCode;
 import com.yisu.sms.service.ValidateCodeGenerator;
 import com.yisu.sms.service.ValidateCodeProcessor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.social.connect.web.HttpSessionSessionStrategy;
@@ -22,6 +23,7 @@ import java.util.Map;
  * @author xuyisu
  *
  */
+@Slf4j
 public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> implements ValidateCodeProcessor {
 
 	/**
@@ -82,7 +84,9 @@ public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> impl
 	 * @return
 	 */
 	private String getSessionKey(ServletWebRequest request) {
-		return SESSION_KEY_PREFIX + getValidateCodeType(request).toString().toUpperCase();
+		String session = SESSION_KEY_PREFIX + getValidateCodeType(request).toString().toUpperCase();
+		log.info(session);
+		return session;
 	}
 
 	/**
