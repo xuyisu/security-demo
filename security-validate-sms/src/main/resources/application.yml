@@ -4,6 +4,11 @@ server:
 logging:
   com.yisu: debug #日志级别
 spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/security-demo?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 123456
   security:
     user:
       name: user  #自定义这是用户名，如果没设置 默认的用户名是user

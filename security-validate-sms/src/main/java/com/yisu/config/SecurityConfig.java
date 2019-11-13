@@ -4,8 +4,13 @@ import com.yisu.authentication.AbstractChannelSecurityConfig;
 import com.yisu.authentication.mobile.SmsCodeAuthenticationSecurityConfig;
 import com.yisu.properties.SecurityProperties;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
+import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
+
+import javax.sql.DataSource;
 
 /**
  * @ClassName SecurityConfig
@@ -15,6 +20,9 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
  */
 @EnableWebSecurity
 public class SecurityConfig extends AbstractChannelSecurityConfig {
+
+    @Autowired
+    private DataSource dataSource;
 
 
     @Autowired
@@ -38,4 +46,13 @@ public class SecurityConfig extends AbstractChannelSecurityConfig {
                 .and()
                 .csrf().disable();
     }
+
+    @Bean
+    public PersistentTokenRepository persistentTokenRepository() {
+        JdbcTokenRepositoryImpl tokenRepository = new JdbcTokenRepositoryImpl();
+        tokenRepository.setDataSource(dataSource);
+        tokenRepository.setCreateTableOnStartup(true);
+        return tokenRepository;
+    }
+
 }
