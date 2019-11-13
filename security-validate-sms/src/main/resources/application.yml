@@ -2,7 +2,8 @@
 server:
   port: 8080  #应用端口号
 logging:
-  com.yisu: debug #日志级别
+  level:
+    com.yisu: debug #日志级别
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
