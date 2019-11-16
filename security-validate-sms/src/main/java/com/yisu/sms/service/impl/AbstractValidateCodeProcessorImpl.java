@@ -9,7 +9,7 @@ import com.yisu.sms.image.ValidateCode;
 import com.yisu.sms.service.ValidateCodeGeneratorService;
 import com.yisu.sms.service.ValidateCodeProcessorService;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.social.connect.web.HttpSessionSessionStrategy;
 import org.springframework.social.connect.web.SessionStrategy;

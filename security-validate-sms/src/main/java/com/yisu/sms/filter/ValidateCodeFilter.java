@@ -10,7 +10,7 @@ import com.yisu.sms.exception.ValidateCodeException;
 import com.yisu.sms.utils.ValidateCodeProcessorHolder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;

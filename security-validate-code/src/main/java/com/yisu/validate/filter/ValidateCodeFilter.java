@@ -4,7 +4,7 @@ import com.yisu.properties.SecurityProperties;
 import com.yisu.validate.exception.ValidateCodeException;
 import com.yisu.validate.image.ImageCode;
 import lombok.Data;
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;

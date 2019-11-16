@@ -6,7 +6,7 @@ package com.yisu.sms.service.impl;
 import com.yisu.properties.SecurityProperties;
 import com.yisu.sms.image.ValidateCode;
 import com.yisu.sms.service.ValidateCodeGeneratorService;
-import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.lang.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.ServletWebRequest;
