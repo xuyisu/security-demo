@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.yisu.sms.security;
+package com.yisu.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;

@@ -1,4 +1,4 @@
-package com.yisu.sms.controller;
+package com.yisu.controller;
 
 import com.yisu.sms.utils.ValidateCodeProcessorHolder;
 import org.springframework.beans.factory.annotation.Autowired;

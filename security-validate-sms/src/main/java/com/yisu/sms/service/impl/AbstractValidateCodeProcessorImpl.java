@@ -6,8 +6,8 @@ package com.yisu.sms.service.impl;
 import com.yisu.enums.ValidateCodeType;
 import com.yisu.sms.exception.ValidateCodeException;
 import com.yisu.sms.image.ValidateCode;
-import com.yisu.sms.service.ValidateCodeGenerator;
-import com.yisu.sms.service.ValidateCodeProcessor;
+import com.yisu.sms.service.ValidateCodeGeneratorService;
+import com.yisu.sms.service.ValidateCodeProcessorService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,23 +24,23 @@ import java.util.Map;
  *
  */
 @Slf4j
-public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> implements ValidateCodeProcessor {
+public abstract class AbstractValidateCodeProcessorImpl<C extends ValidateCode> implements ValidateCodeProcessorService {
 
 	/**
 	 * 操作session的工具类
 	 */
 	private SessionStrategy sessionStrategy = new HttpSessionSessionStrategy();
 	/**
-	 * 收集系统中所有的 {@link ValidateCodeGenerator} 接口的实现。
+	 * 收集系统中所有的 {@link ValidateCodeGeneratorService} 接口的实现。
 	 */
 	@Autowired
-	private Map<String, ValidateCodeGenerator> validateCodeGenerators;
+	private Map<String, ValidateCodeGeneratorService> validateCodeGenerators;
 
 	/*
 	 * (non-Javadoc)
 	 *
 	 * @see
-	 * com.imooc.security.core.validate.code.ValidateCodeProcessor#create(org.
+	 * com.imooc.security.core.validate.code.ValidateCodeProcessorService#create(org.
 	 * springframework.web.context.request.ServletWebRequest)
 	 */
 	@Override
@@ -59,8 +59,8 @@ public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> impl
 	@SuppressWarnings("unchecked")
 	private C generate(ServletWebRequest request) {
 		String type = getValidateCodeType(request).toString().toLowerCase();
-		String generatorName = type + ValidateCodeGenerator.class.getSimpleName();
-		ValidateCodeGenerator validateCodeGenerator = validateCodeGenerators.get(generatorName);
+		String generatorName = type + ValidateCodeGeneratorService.class.getSimpleName();
+		ValidateCodeGeneratorService validateCodeGenerator = validateCodeGenerators.get(generatorName);
 		if (validateCodeGenerator == null) {
 			throw new ValidateCodeException("验证码生成器" + generatorName + "不存在");
 		}

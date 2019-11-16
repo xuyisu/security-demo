@@ -11,7 +11,7 @@ import org.springframework.web.context.request.ServletWebRequest;
  * @author xuyisu
  *
  */
-public interface ValidateCodeProcessor {
+public interface ValidateCodeProcessorService {
 
 	/**
 	 * 验证码放入session时的前缀

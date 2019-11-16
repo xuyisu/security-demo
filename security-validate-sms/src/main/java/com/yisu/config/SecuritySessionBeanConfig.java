@@ -11,7 +11,7 @@ import org.springframework.security.web.session.InvalidSessionStrategy;
 import org.springframework.security.web.session.SessionInformationExpiredStrategy;
 
 @Configuration
-public class SessionSecurityBeanConfig {
+public class SecuritySessionBeanConfig {
     @Autowired
     private SecurityProperties securityProperties;
 

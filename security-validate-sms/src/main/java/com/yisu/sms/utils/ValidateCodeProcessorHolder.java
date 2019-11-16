@@ -5,7 +5,7 @@ package com.yisu.sms.utils;
 
 import com.yisu.enums.ValidateCodeType;
 import com.yisu.sms.exception.ValidateCodeException;
-import com.yisu.sms.service.ValidateCodeProcessor;
+import com.yisu.sms.service.ValidateCodeProcessorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -20,15 +20,15 @@ import java.util.Map;
 public class ValidateCodeProcessorHolder {
 
 	@Autowired
-	private Map<String, ValidateCodeProcessor> validateCodeProcessors;
+	private Map<String, ValidateCodeProcessorService> validateCodeProcessors;
 
-	public ValidateCodeProcessor findValidateCodeProcessor(ValidateCodeType type) {
+	public ValidateCodeProcessorService findValidateCodeProcessor(ValidateCodeType type) {
 		return findValidateCodeProcessor(type.toString().toLowerCase());
 	}
 
-	public ValidateCodeProcessor findValidateCodeProcessor(String type) {
-		String name = type.toLowerCase() + ValidateCodeProcessor.class.getSimpleName();
-		ValidateCodeProcessor processor = validateCodeProcessors.get(name);
+	public ValidateCodeProcessorService findValidateCodeProcessor(String type) {
+		String name = type.toLowerCase() + ValidateCodeProcessorService.class.getSimpleName();
+		ValidateCodeProcessorService processor = validateCodeProcessors.get(name);
 		if (processor == null) {
 			throw new ValidateCodeException("验证码处理器" + name + "不存在");
 		}

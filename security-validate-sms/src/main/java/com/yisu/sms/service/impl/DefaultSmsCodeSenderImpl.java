@@ -3,13 +3,13 @@
  */
 package com.yisu.sms.service.impl;
 
-import com.yisu.sms.service.SmsCodeSender;
+import com.yisu.sms.service.SmsCodeSenderService;
 
 /**
  * @author xuyisu
  *
  */
-public class DefaultSmsCodeSender implements SmsCodeSender {
+public class DefaultSmsCodeSenderImpl implements SmsCodeSenderService {
 
 	@Override
 	public void send(String mobile, String code) {

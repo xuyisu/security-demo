@@ -3,10 +3,8 @@
  */
 package com.yisu.config;
 
-import com.yisu.properties.SecurityProperties;
-import com.yisu.sms.service.SmsCodeSender;
-import com.yisu.sms.service.impl.DefaultSmsCodeSender;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.yisu.sms.service.SmsCodeSenderService;
+import com.yisu.sms.service.impl.DefaultSmsCodeSenderImpl;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,9 +18,9 @@ public class ValidateCodeBeanConfig {
 
 
 	@Bean
-	@ConditionalOnMissingBean(SmsCodeSender.class)
-	public SmsCodeSender smsCodeSender() {
-		return new DefaultSmsCodeSender();
+	@ConditionalOnMissingBean(SmsCodeSenderService.class)
+	public SmsCodeSenderService smsCodeSender() {
+		return new DefaultSmsCodeSenderImpl();
 	}
 
 

@@ -5,7 +5,7 @@ package com.yisu.sms.service.impl;
 
 import com.yisu.constants.FwCommonConstants;
 import com.yisu.sms.image.ValidateCode;
-import com.yisu.sms.service.SmsCodeSender;
+import com.yisu.sms.service.SmsCodeSenderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.ServletRequestUtils;
@@ -17,14 +17,14 @@ import org.springframework.web.context.request.ServletWebRequest;
  * @author xuyisu
  *
  */
-@Component("smsValidateCodeProcessor")
-public class SmsCodeProcessor extends AbstractValidateCodeProcessor<ValidateCode> {
+@Component("smsValidateCodeProcessorService")
+public class SmsCodeProcessorImpl extends AbstractValidateCodeProcessorImpl<ValidateCode> {
 
 	/**
 	 * 短信验证码发送器
 	 */
 	@Autowired
-	private SmsCodeSender smsCodeSender;
+	private SmsCodeSenderService smsCodeSender;
 
 	@Override
 	protected void send(ServletWebRequest request, ValidateCode validateCode) throws Exception {

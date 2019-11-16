@@ -10,7 +10,7 @@ import org.springframework.web.context.request.ServletWebRequest;
  * @author xuyisu
  *
  */
-public interface ValidateCodeGenerator {
+public interface ValidateCodeGeneratorService {
 
 	ValidateCode generate(ServletWebRequest request);
 

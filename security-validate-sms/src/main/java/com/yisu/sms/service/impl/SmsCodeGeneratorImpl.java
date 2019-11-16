@@ -5,7 +5,7 @@ package com.yisu.sms.service.impl;
 
 import com.yisu.properties.SecurityProperties;
 import com.yisu.sms.image.ValidateCode;
-import com.yisu.sms.service.ValidateCodeGenerator;
+import com.yisu.sms.service.ValidateCodeGeneratorService;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -15,8 +15,8 @@ import org.springframework.web.context.request.ServletWebRequest;
  * @author xuyisu
  *
  */
-@Component("smsValidateCodeGenerator")
-public class SmsCodeGenerator implements ValidateCodeGenerator {
+@Component("smsValidateCodeGeneratorService")
+public class SmsCodeGeneratorImpl implements ValidateCodeGeneratorService {
 
 	@Autowired
 	private SecurityProperties securityProperties;
@@ -25,7 +25,7 @@ public class SmsCodeGenerator implements ValidateCodeGenerator {
 	 * (non-Javadoc)
 	 *
 	 * @see
-	 * com.imooc.security.core.validate.code.ValidateCodeGenerator#generate(org.
+	 * com.imooc.security.core.validate.code.ValidateCodeGeneratorService#generate(org.
 	 * springframework.web.context.request.ServletWebRequest)
 	 */
 	@Override
