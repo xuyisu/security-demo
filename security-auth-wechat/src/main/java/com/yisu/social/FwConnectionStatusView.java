@@ -17,11 +17,11 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author zhailiang
+ * @author xuyisu
  *
  */
 @Component("connect/status")
-public class ImoocConnectionStatusView extends AbstractView {
+public class FwConnectionStatusView extends AbstractView {
 
 	@Autowired
 	private ObjectMapper objectMapper;

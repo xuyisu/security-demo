@@ -7,7 +7,7 @@ import com.yisu.social.weixin.config.SocialProperties;
 import lombok.Data;
 
 /**
- * @author zhailiang
+ * @author xuyisu
  *
  */
 @Data

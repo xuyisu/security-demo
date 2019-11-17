@@ -6,7 +6,7 @@ package com.yisu.social.weixin.api;
 /**
  * 微信API调用接口
  *
- * @author zhailiang
+ * @author xuyisu
  *
  */
 public interface Weixin {

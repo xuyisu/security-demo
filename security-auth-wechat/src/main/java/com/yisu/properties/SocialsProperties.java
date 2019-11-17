@@ -6,7 +6,7 @@ package com.yisu.properties;
 import lombok.Data;
 
 /**
- * @author zhailiang
+ * @author xuyisu
  *
  */
 @Data

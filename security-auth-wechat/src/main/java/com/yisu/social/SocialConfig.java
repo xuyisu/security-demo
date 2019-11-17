@@ -20,7 +20,7 @@ import org.springframework.social.security.SpringSocialConfigurer;
 import javax.sql.DataSource;
 
 /**
- * @author zhailiang
+ * @author xuyisu
  *
  */
 @Configuration
@@ -40,7 +40,7 @@ public class SocialConfig extends SocialConfigurerAdapter {
 	public UsersConnectionRepository getUsersConnectionRepository(ConnectionFactoryLocator connectionFactoryLocator) {
 		JdbcUsersConnectionRepository repository = new JdbcUsersConnectionRepository(dataSource,
 				connectionFactoryLocator, Encryptors.noOpText());
-		repository.setTablePrefix("imooc_");
+		repository.setTablePrefix("fw_");
 		if(connectionSignUp != null) {
 			repository.setConnectionSignUp(connectionSignUp);
 		}
@@ -50,7 +50,7 @@ public class SocialConfig extends SocialConfigurerAdapter {
 	@Bean
 	public SpringSocialConfigurer imoocSocialSecurityConfig() {
 		String filterProcessesUrl = securityProperties.getSocial().getFilterProcessesUrl();
-		ImoocSpringSocialConfigurer configurer = new ImoocSpringSocialConfigurer(filterProcessesUrl);
+		FwSpringSocialConfigurer configurer = new FwSpringSocialConfigurer(filterProcessesUrl);
 		configurer.signupUrl(securityProperties.getBrowser().getSignUpUrl());
 		return configurer;
 	}

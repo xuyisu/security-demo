@@ -6,7 +6,7 @@ package com.yisu.social.weixin.api;
 /**
  * 微信用户信息
  *
- * @author zhailiang
+ * @author xuyisu
  */
 public class WeixinUserInfo {
 

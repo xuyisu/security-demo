@@ -5,7 +5,7 @@ package com.yisu.social.weixin.config;
 
 import com.yisu.properties.SecurityProperties;
 import com.yisu.properties.WeixinProperties;
-import com.yisu.social.ImoocConnectView;
+import com.yisu.social.FwConnectView;
 import com.yisu.social.weixin.connect.WeixinConnectionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -18,7 +18,7 @@ import org.springframework.web.servlet.View;
 /**
  * 微信登录配置
  *
- * @author zhailiang
+ * @author xuyisu
  *
  */
 @Configuration
@@ -46,7 +46,7 @@ public class WeixinAutoConfiguration extends SocialAutoConfigurerAdapter {
 	@Bean({"connect/weixinConnect", "connect/weixinConnected"})
 	@ConditionalOnMissingBean(name = "weixinConnectedView")
 	public View weixinConnectedView() {
-		return new ImoocConnectView();
+		return new FwConnectView();
 	}
 
 

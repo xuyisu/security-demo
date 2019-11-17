@@ -10,10 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
 /**
- * @author zhailiang
+ * @author xuyisu
  *
  */
-public class ImoocConnectView extends AbstractView {
+public class FwConnectView extends AbstractView {
 
 	/*
 	 * (non-Javadoc)

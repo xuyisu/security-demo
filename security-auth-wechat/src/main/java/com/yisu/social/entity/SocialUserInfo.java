@@ -6,7 +6,7 @@ package com.yisu.social.entity;
 import lombok.Data;
 
 /**
- * @author zhailiang
+ * @author xuyisu
  *
  */
 @Data

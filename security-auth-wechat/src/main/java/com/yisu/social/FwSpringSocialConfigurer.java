@@ -7,14 +7,14 @@ import org.springframework.social.security.SocialAuthenticationFilter;
 import org.springframework.social.security.SpringSocialConfigurer;
 
 /**
- * @author zhailiang
+ * @author xuyisu
  *
  */
-public class ImoocSpringSocialConfigurer extends SpringSocialConfigurer {
+public class FwSpringSocialConfigurer extends SpringSocialConfigurer {
 
 	private String filterProcessesUrl;
 
-	public ImoocSpringSocialConfigurer(String filterProcessesUrl) {
+	public FwSpringSocialConfigurer(String filterProcessesUrl) {
 		this.filterProcessesUrl = filterProcessesUrl;
 	}
 
