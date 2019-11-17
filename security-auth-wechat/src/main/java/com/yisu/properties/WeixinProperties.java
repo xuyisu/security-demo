@@ -3,8 +3,8 @@
  */
 package com.yisu.properties;
 
+import com.yisu.social.weixin.config.SocialProperties;
 import lombok.Data;
-import org.springframework.boot.autoconfigure.social.SocialProperties;
 
 /**
  * @author zhailiang

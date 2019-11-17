@@ -1,7 +1,6 @@
 package com.yisu.config;
 
 import com.yisu.authentication.AbstractChannelSecurityConfig;
-import com.yisu.authentication.mobile.SmsCodeAuthenticationSecurityConfig;
 import com.yisu.constants.FwCommonConstants;
 import com.yisu.properties.SecurityProperties;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +14,7 @@ import org.springframework.security.web.authentication.rememberme.JdbcTokenRepos
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 import org.springframework.security.web.session.InvalidSessionStrategy;
 import org.springframework.security.web.session.SessionInformationExpiredStrategy;
+import org.springframework.social.security.SpringSocialConfigurer;
 
 import javax.sql.DataSource;
 
@@ -37,8 +37,7 @@ public class SecurityConfig extends AbstractChannelSecurityConfig {
     private UserDetailsService userDetailsService;
 
     @Autowired
-    private SmsCodeAuthenticationSecurityConfig smsCodeAuthenticationSecurityConfig;
-
+    private SpringSocialConfigurer imoocSocialSecurityConfig;
 
     @Autowired
     private SessionInformationExpiredStrategy sessionInformationExpiredStrategy;
@@ -50,9 +49,7 @@ public class SecurityConfig extends AbstractChannelSecurityConfig {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        applyPasswordAuthenticationConfig(http);
-
-        http.apply(smsCodeAuthenticationSecurityConfig)
+        http.apply(imoocSocialSecurityConfig)
                 .and()
                 .rememberMe()
                 .tokenRepository(persistentTokenRepository())

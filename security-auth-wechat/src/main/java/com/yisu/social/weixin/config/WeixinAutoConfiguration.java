@@ -10,7 +10,6 @@ import com.yisu.social.weixin.connect.WeixinConnectionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.autoconfigure.social.SocialAutoConfigurerAdapter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.social.connect.ConnectionFactory;
@@ -28,6 +27,7 @@ public class WeixinAutoConfiguration extends SocialAutoConfigurerAdapter {
 
 	@Autowired
 	private SecurityProperties securityProperties;
+
 
 	/*
 	 * (non-Javadoc)
@@ -48,5 +48,6 @@ public class WeixinAutoConfiguration extends SocialAutoConfigurerAdapter {
 	public View weixinConnectedView() {
 		return new ImoocConnectView();
 	}
+
 
 }

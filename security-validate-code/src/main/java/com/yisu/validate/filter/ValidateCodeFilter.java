@@ -4,6 +4,7 @@ import com.yisu.properties.SecurityProperties;
 import com.yisu.validate.exception.ValidateCodeException;
 import com.yisu.validate.image.ImageCode;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,7 @@ import java.io.IOException;
  */
 @Component("validateCodeFilter")
 @Data
+@EqualsAndHashCode(callSuper = false)
 public class ValidateCodeFilter extends OncePerRequestFilter implements InitializingBean {
 
 	/**

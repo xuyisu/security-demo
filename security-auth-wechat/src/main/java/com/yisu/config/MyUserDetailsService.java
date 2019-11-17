@@ -3,13 +3,16 @@
  */
 package com.yisu.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.social.security.SocialUser;
+import org.springframework.social.security.SocialUserDetails;
+import org.springframework.social.security.SocialUserDetailsService;
 import org.springframework.stereotype.Component;
 
 /**
@@ -17,7 +20,8 @@ import org.springframework.stereotype.Component;
  *
  */
 @Component
-public class MyUserDetailsService implements UserDetailsService {
+@Slf4j
+public class MyUserDetailsService implements UserDetailsService, SocialUserDetailsService {
 
 
 	@Autowired
@@ -32,13 +36,23 @@ public class MyUserDetailsService implements UserDetailsService {
 		System.out.println("username: " + username);
 		System.out.println("password: " + password);
 
-		// 模拟查询数据库，获取属于Admin和Normal角色的用户
-		User user = new User(username, password, AuthorityUtils.commaSeparatedStringToAuthorityList("Admin,Normal"));
-
-		return user;
+		return buildUser(username);
 	}
 
 
+	@Override
+	public SocialUserDetails loadUserByUserId(String userId) throws UsernameNotFoundException {
+		log.info("设计登录用户Id:" + userId);
+		return buildUser(userId);
+	}
 
-
+	private SocialUserDetails buildUser(String userId) {
+		// 根据用户名查找用户信息
+		//根据查找到的用户信息判断用户是否被冻结
+		String password = passwordEncoder.encode("123456");
+		log.info("数据库密码是:"+password);
+		return new SocialUser(userId, password,
+				true, true, true, true,
+				AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
+	}
 }

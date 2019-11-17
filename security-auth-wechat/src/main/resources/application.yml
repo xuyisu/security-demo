@@ -19,3 +19,7 @@ fw:
         image:
           length: 4 #设置验证码的位数
           expireIn: 60 #设置验证码超时时间（秒）
+    social:
+      weixin:
+        app-id: wxd99431bbff8305a0
+        app-secret: 60f78681d063590a469f1b297feff3c4
