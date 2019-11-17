@@ -37,7 +37,7 @@ public class SecurityConfig extends AbstractChannelSecurityConfig {
     private UserDetailsService userDetailsService;
 
     @Autowired
-    private SpringSocialConfigurer imoocSocialSecurityConfig;
+    private SpringSocialConfigurer fwSocialSecurityConfig;
 
     @Autowired
     private SessionInformationExpiredStrategy sessionInformationExpiredStrategy;
@@ -49,7 +49,7 @@ public class SecurityConfig extends AbstractChannelSecurityConfig {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        http.apply(imoocSocialSecurityConfig)
+        http.apply(fwSocialSecurityConfig)
                 .and()
                 .rememberMe()
                 .tokenRepository(persistentTokenRepository())

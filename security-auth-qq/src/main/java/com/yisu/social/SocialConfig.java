@@ -48,7 +48,7 @@ public class SocialConfig extends SocialConfigurerAdapter {
 	}
 
 	@Bean
-	public SpringSocialConfigurer imoocSocialSecurityConfig() {
+	public SpringSocialConfigurer fwSocialSecurityConfig() {
 		String filterProcessesUrl = securityProperties.getSocial().getFilterProcessesUrl();
 		FwSpringSocialConfigurer configurer = new FwSpringSocialConfigurer(filterProcessesUrl);
 		configurer.signupUrl(securityProperties.getBrowser().getSignUpUrl());

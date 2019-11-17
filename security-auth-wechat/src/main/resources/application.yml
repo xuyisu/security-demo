@@ -15,12 +15,8 @@ fw:
     browser:
       loginPage: /default-login.html  #默认登录页面地址  loginType为REDIRECT时起作用
       loginType: JSON  #两种  REDIRECT  重定向页面 ，JSON 返回json描述
-      code:
-        image:
-          length: 4 #设置验证码的位数
-          expireIn: 60 #设置验证码超时时间（秒）
     social:
       weixin:
-        app-id: wxd99431bbff8305a0
-        app-secret: 60f78681d063590a469f1b297feff3c4
-      filterProcessesUrl: /qqLogin
+        app-id:
+        app-secret:
+      filterProcessesUrl: /qqLogin  #默认auth
