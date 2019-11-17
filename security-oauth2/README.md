@@ -38,4 +38,4 @@
     6. /oauth/token_key：提供公有密匙的端点，如果你使用JWT令牌的话。
     7. /oauth/logout: 退出
 
-地址:https://www.jianshu.com/p/13b8654a157f
+地址:https://www.jianshu.com/p/13b8654a157f.https://juejin.im/post/5ae5c06051882567137df8c9

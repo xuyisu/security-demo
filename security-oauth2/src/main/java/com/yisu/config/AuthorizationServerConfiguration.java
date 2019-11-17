@@ -68,6 +68,15 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
                 .authorities("oauth2") //客户端可以使用的权限
                 .secret(secret)  //secret客户端安全码
                 .accessTokenValiditySeconds(ACCESS_TOKEN_VALIDITY_SECONDS)    //token 时间秒
+                .refreshTokenValiditySeconds(FREFRESH_TOKEN_VALIDITY_SECONDS)
+                .and()
+                .withClient(CLIEN_ID_THREE) //client_id用来标识客户的Id  客户端 2
+                .resourceIds(RESOURCE_ID)
+                .authorizedGrantTypes(AUTHORIZATION_CODE, REFRESH_TOKEN)   //允许授权类型  密码授权模式
+                .scopes("all") //允许授权范围
+                .authorities("oauth2") //客户端可以使用的权限
+                .secret(secret)  //secret客户端安全码
+                .accessTokenValiditySeconds(ACCESS_TOKEN_VALIDITY_SECONDS)    //token 时间秒
                 .refreshTokenValiditySeconds(FREFRESH_TOKEN_VALIDITY_SECONDS); //刷新token 时间 秒
 
     }
