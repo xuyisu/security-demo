@@ -1,0 +1,15 @@
+#本节说的是SpringSecutity的短信验证码
+server:
+  port: 8080  #应用端口号
+logging:
+  level:
+    com.yisu: debug #日志级别
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/security-demo?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 123456
+fw:
+  security:
+    social:
