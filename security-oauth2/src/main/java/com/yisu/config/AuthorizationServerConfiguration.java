@@ -80,6 +80,7 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
                         .accessTokenValiditySeconds(config.getAccessTokenValiditySeconds())
                         .refreshTokenValiditySeconds(60 * 60 * 24 * 15)
                         .authorizedGrantTypes("refresh_token", "password", "authorization_code")//OAuth2支持的验证模式
+                        .redirectUris("http://www.baidu.com")
                         .scopes("all");
             }
         }

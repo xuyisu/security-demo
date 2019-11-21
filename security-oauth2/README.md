@@ -39,3 +39,16 @@
     7. /oauth/logout: 退出
 
 地址:https://www.jianshu.com/p/13b8654a157f.https://juejin.im/post/5ae5c06051882567137df8c9
+## 3.请求模式测试
+### 3.1 授权码模式
+浏览器直接访问地址:`http://localhost:8080/oauth/authorize?response_type=code&client_id=test1&redirect_uri=http://www.baidu.com&scope=all`
+![authorization_code](images/authorization_code.png)
+点击Authorize就会跳转到redirect_uri对应的页面
+```text
+       client_id：第三方应用在授权服务器注册的 Id
+       response_type：固定值　code。
+       redirect_uri：授权服务器授权重定向哪儿的 URL。
+       scope：权限
+       state：随机字符串，可以省略
+```
+授权之后会得到一个code https://www.baidu.com/?code=7lIyIa
