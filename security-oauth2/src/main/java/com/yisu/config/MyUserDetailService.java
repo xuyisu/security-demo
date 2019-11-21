@@ -9,7 +9,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-@Service(value = "userService")
+@Service(value = "userDetailsService")
 public class MyUserDetailService implements UserDetailsService {
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -24,7 +24,7 @@ public class MyUserDetailService implements UserDetailsService {
         System.out.println("password: " + password);
 
         // 模拟查询数据库，获取属于Admin和Normal角色的用户
-        User user = new User(username, password, AuthorityUtils.commaSeparatedStringToAuthorityList("Admin,Normal"));
+        User user = new User(username, password, AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_USER"));
 
         return user;
     }

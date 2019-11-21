@@ -20,7 +20,7 @@ import javax.annotation.Resource;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-    @Resource(name = "userService")
+    @Resource(name = "userDetailsService")
     private UserDetailsService userDetailsService;
 
     @Override
@@ -37,13 +37,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-
-        http.csrf().disable()
-                .requestMatchers().anyRequest()
-                .and()
-                .authorizeRequests()
-                .antMatchers("/oauth/**","/oauth/*").permitAll()
-                .and().exceptionHandling().accessDeniedHandler(new OAuth2AccessDeniedHandler());
+        http
+                .httpBasic().and()
+                .csrf().disable();
     }
 
 
