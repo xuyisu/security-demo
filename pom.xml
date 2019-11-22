@@ -19,6 +19,7 @@
         <module>security-validate-code</module>
         <module>security-validate-sms</module>
         <module>security-oauth2</module>
+        <module>security-oauth2-sso</module>
     </modules>
 
     <parent>

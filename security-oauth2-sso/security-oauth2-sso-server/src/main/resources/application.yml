@@ -1,0 +1,12 @@
+#本节说的是SpringSecutity的单点登录
+server:
+  port: 8080  #应用端口号
+  servlet:
+    context-path: /server
+spring:
+  security:
+    user:
+      password: 123456 #自定义密码，如果没设置 默认的密码在控制台中寻找
+logging:
+  level:
+    com.yisu: debug #日志级别
