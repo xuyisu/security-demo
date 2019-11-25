@@ -52,3 +52,14 @@
        state：随机字符串，可以省略
 ```
 授权之后会得到一个code https://www.baidu.com/?code=7lIyIa
+以下利用postman发送接口
+#### 3.1.1 构建请求AUthorization
+![secret](images/secret.png)
+#### 3.1.2 请求参数
+![request](images/request.png)
+#### 3.1.3 响应结果
+![response](images/custom.png)
+#### 3.1.4 根据token请求users/user接口
+![api](images/tokengetuser.png)
+#### 3.1.5 用错误的token请求users/user接口
+![invlidate](images/invidate token.png)
