@@ -63,3 +63,18 @@
 ![api](images/tokengetuser.png)
 #### 3.1.5 用错误的token请求users/user接口
 ![invlidate](images/invidate token.png)
+### 3.2 密码模式
+#### 3.2.1 构建请求AUthorization
+![secret](images/secret.png)
+#### 3.2.2 请求及响应结果参数
+![password](images/password.png)
+#### 3.2.3 设置存储类型为redis
+```yml
+fw:
+  security:
+    oauth2:
+      storeType: redis
+```
+![password](images/password.png)
+#### 3.2.4 刷新access_token
+![refresh_token](images/refresh_token.png)

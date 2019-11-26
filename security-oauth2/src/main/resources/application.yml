@@ -31,3 +31,5 @@ fw:
       clients[1]:
         clientId: test2
         clientSecret: test2
+    oauth2:
+      storeType: redis  # 还可以设置jwt
