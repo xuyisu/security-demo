@@ -38,7 +38,6 @@
     6. /oauth/token_key：提供公有密匙的端点，如果你使用JWT令牌的话。
     7. /oauth/logout: 退出
 
-地址:https://www.jianshu.com/p/13b8654a157f.https://juejin.im/post/5ae5c06051882567137df8c9
 ## 3.请求模式测试
 ### 3.1 授权码模式
 浏览器直接访问地址:`http://localhost:8080/oauth/authorize?response_type=code&client_id=test1&redirect_uri=http://www.baidu.com&scope=all`
