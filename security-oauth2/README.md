@@ -75,5 +75,7 @@ fw:
       storeType: redis
 ```
 ![password](images/password.png)
+登陆后redis存储的token等信息
+![redis](images/redis_token.png)
 #### 3.2.4 刷新access_token
 ![refresh_token](images/refresh_token.png)
