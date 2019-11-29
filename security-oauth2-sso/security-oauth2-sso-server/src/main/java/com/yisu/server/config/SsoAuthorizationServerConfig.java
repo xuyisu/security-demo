@@ -51,7 +51,7 @@ public class SsoAuthorizationServerConfig extends AuthorizationServerConfigurerA
 	@Bean
 	public JwtAccessTokenConverter jwtAccessTokenConverter(){
 		JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
-        converter.setSigningKey("imooc");
+        converter.setSigningKey("fw");
         return converter;
 	}
 

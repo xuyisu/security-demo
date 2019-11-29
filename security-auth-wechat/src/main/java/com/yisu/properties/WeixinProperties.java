@@ -5,12 +5,14 @@ package com.yisu.properties;
 
 import com.yisu.social.weixin.config.SocialProperties;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * @author xuyisu
  *
  */
 @Data
+@EqualsAndHashCode(callSuper = false)
 public class WeixinProperties extends SocialProperties {
 
 	/**

@@ -13,9 +13,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @Data
 public class SecurityProperties {
 
-    private BrowserProperties browser = new BrowserProperties();
-
-
     private OAuth2Properties oauth = new OAuth2Properties();
 }
 

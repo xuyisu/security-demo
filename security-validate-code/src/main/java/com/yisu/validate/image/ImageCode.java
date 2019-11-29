@@ -1,6 +1,7 @@
 package com.yisu.validate.image;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.awt.image.BufferedImage;
 import java.time.LocalDateTime;
@@ -11,6 +12,7 @@ import java.time.LocalDateTime;
  *
  */
 @Data
+@EqualsAndHashCode(callSuper = false)
 public class ImageCode extends ValidateCode {
 
 	private BufferedImage image;
