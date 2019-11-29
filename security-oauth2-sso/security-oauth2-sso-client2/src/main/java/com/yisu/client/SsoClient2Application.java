@@ -15,14 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
  *
  */
 @SpringBootApplication
-@RestController
 @EnableOAuth2Sso
 public class SsoClient2Application {
 	
-	@GetMapping("/user")
-	public Authentication user(Authentication user) {
-		return user;
-	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(SsoClient2Application.class, args);

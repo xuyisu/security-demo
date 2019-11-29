@@ -4,9 +4,33 @@ server:
   servlet:
     context-path: /server
 spring:
+  #redis 配置
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1s
+        min-idle: 0
+        max-idle: 8
+fw:
   security:
-    user:
-      password: 123456 #自定义密码，如果没设置 默认的密码在控制台中寻找
+    oauth:
+      jwtSigningKey: security
+      clients[0]:
+        clientId: test1
+        clientSecret: test1
+        redirectUri: http://127.0.0.1:8082/client2/login
+        autoApprove: true
+      clients[1]:
+        clientId: test2
+        clientSecret: test2
+        redirectUri: http://127.0.0.1:8081/client1/login
+        autoApprove: true
+    oauth2:
+      storeType: redis  # 还可以设置jwt
 logging:
   level:
     com.yisu: debug #日志级别

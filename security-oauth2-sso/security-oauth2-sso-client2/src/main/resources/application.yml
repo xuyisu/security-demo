@@ -7,17 +7,17 @@ spring:
   security:
     user:
       password: 123456 #自定义密码，如果没设置 默认的密码在控制台中寻找
-logging:
-  level:
-    com.yisu: debug #日志级别
 security:
   oauth2:
     client:
-      client-id: fw2
-      client-secret: fwsecrect2
+      client-id: test2
+      client-secret: test2
       user-authorization-uri: http://127.0.0.1:8080/server/oauth/authorize
       access-token-uri: http://127.0.0.1:8080/server/oauth/token
     resource:
       jwt:
         key-uri: http://127.0.0.1:8080/server/oauth/token_key
-        key-value: fw
+#        key-value: security
+logging:
+  level:
+    com.yisu: debug #日志级别
