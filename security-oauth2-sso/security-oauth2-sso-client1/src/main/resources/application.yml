@@ -3,9 +3,6 @@ server:
   port: 8081  #应用端口号
   servlet:
     context-path: /client1
-logging:
-  level:
-    com.yisu: debug #日志级别
 security:
   oauth2:
     client:
@@ -16,4 +13,6 @@ security:
     resource:
       jwt:
         key-uri: http://127.0.0.1:8080/server/oauth/token_key
-        key-value: security
+logging:
+  level:
+    com.yisu: debug #日志级别
