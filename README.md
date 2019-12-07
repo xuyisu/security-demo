@@ -24,6 +24,7 @@
  security-auth-qq | [security QQ登录](https://github.com/xuyisu/security-demo/tree/master/security-auth-qq) 
  security-auth-wechat | [security Wechat登录](https://github.com/xuyisu/security-demo/tree/master/security-auth-wechat) 
  security-oauth2 | [security oauth2授权](https://github.com/xuyisu/security-demo/tree/master/security-oauth2) 
+ security-oauth2-db | [security oauth2授权数据库授权](https://github.com/xuyisu/security-demo/tree/master/security-oauth2-db) 
  security-oauth2-sso | [security oauth2单点登录](https://github.com/xuyisu/security-demo/tree/master/security-oauth2-sso) 
  
  ## 2.后续计划
