@@ -27,12 +27,7 @@
  security-oauth2-db | [security oauth2授权数据库授权](https://github.com/xuyisu/security-demo/tree/master/security-oauth2-db) 
  security-oauth2-sso | [security oauth2单点登录](https://github.com/xuyisu/security-demo/tree/master/security-oauth2-sso) 
  
- ## 2.后续计划
-  模块 | 功能 
-  ---|---
-  security-auth-sina | security 新浪登录
-  security-auth-github |  security GitHub登录  
-  ...
+
   
 ### 交流群
 >里面上传了很多架构、技术文档、共同进步
