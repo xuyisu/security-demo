@@ -1,6 +1,6 @@
  ### 整理了SpringSecurity常见例子
  
- ##模块划分，帮你快速掌握Spring Security
+ ## 模块划分，帮你快速掌握Spring Security
  
  ### 1. 核心依赖 
  
